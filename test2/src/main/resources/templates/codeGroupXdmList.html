@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko"xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codeGroupxdmList</title>
+  </head>
+  <body>
+    <table>
+    	<tr>
+    		<td>ch</td>
+    		<td>#</td>
+    		<td>Del</td>
+    		<td>seq</td>
+    		<td>name</td>
+    		<td>modDate</td>
+    	</tr>
+    	<tr th:if="${#lists.isEmpty(List)}">
+    		<td colspan="6">There is no data !!!</td>
+    	</tr>
+    	<tr th:if="${#lists.isEmpty(List)}" th:each="list : ${list}"> 
+<!--     		<td th:text="${list.cgDelete}"></td> -->
+    		<td th:if="${list.cgDelete eq 0}">N</td>
+    		<td th:unless="${list.cgDelete eq 0}">Y</td>
+    		<td th:text="${list.seq}"></td>
+    		<td th:text="${list.name}"></td>
+    		<td th:text="${list.xifcdSeqCount}"></td>
+<!--     		<td th:text="${#dates.format(list.modDateTime, 'yyyy-mmydd HH:mm:ss')}"></td> -->
+    	</tr>
+    </table>
+   
+  </body>
+</html>
