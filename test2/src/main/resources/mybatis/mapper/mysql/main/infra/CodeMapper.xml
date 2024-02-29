@@ -9,9 +9,10 @@
        SELECT
             a.seq
             ,a.name
-            ,a.cgCreate
-            ,a.cgDelete
-            ,(select aa.name from Code aa where 1=1 and aa.seq = a.code_seq) as codegroup_name
+            ,a.code_seq
+            ,a.codeDelete
+            ,a.codeCreate
+            ,(select aa.name from codegroup aa where 1=1 and aa.seq = a.code_seq) as codegroup_name
          FROM Code a
         WHERE 1=1
         ORDER BY a.Seq DESC

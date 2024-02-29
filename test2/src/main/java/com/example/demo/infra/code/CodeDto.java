@@ -10,8 +10,7 @@ public class CodeDto {
 	private Integer codeDelete;
 	
 	private String code_seq; //그룹코드seq
-	private String cg_name; //그룹코드name
-	
+	private String codegroup_name; //그룹코드name
 	public String getSeq() {
 		return seq;
 	}
@@ -42,12 +41,14 @@ public class CodeDto {
 	public void setCode_seq(String code_seq) {
 		this.code_seq = code_seq;
 	}
-	public String getCg_name() {
-		return cg_name;
+	public String getCodegroup_name() {
+		return codegroup_name;
 	}
-	public void setCg_name(String cg_name) {
-		this.cg_name = cg_name;
+	public void setCodegroup_name(String codegroup_name) {
+		this.codegroup_name = codegroup_name;
 	}
+	
+
 	
 	
 }

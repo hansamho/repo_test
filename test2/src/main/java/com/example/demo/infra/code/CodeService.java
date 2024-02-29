@@ -7,11 +7,18 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CodeService {
+	
 	@Autowired
 	CodeDao dao;
+//	CodeGroupDao dao = new CodeGroupDao();
 	
-	public List<CodeDto> selectList(){
-		return dao.selectList();
-	}
+//	public List<CodeGroupDto> selectList(){
+//		
+//		List<CodeGroupDto> list = dao.selectList();
+//		
+//		return list;
+//	}
 	
+	public List<CodeDto> selectList(){ return dao.selectList();}
+
 }
