@@ -23,9 +23,11 @@
     		<td th:if="${list.cgDelete eq 0}">N</td>
     		<td th:unless="${list.cgDelete eq 0}">Y</td>
     		<td th:text="${list.seq}"></td>
-    		<td th:text="${list.name}"></td>
+    		<td><a th:href="@{/codeGroupView(seq=${list.seq},name=${list.name})}" th:text="${list.name}"></a></td>
+    		
+<!--     		<td th:text="${list.name}"></td>   		 -->
     		<td th:text="${list.xifcdSeqCount}"></td>
-<!--     		<td th:text="${#dates.format(list.modDateTime, 'yyyy-mmydd HH:mm:ss')}"></td> -->
+<!--     		<td th:text="${#dates.format(list.modDateTime, 'yyyy-MM-dd HH:mm:ss')}"></td> -->
     	</tr>
     </table>
    

@@ -24,6 +24,18 @@ public class CodeGroupController {
 		
 		model.addAttribute("list", service.selectList());
 		
-		return "codeGroupXdmList";
+		return "codeGroupXdmList"; 
+		
+		
+			
 	}
+	@RequestMapping(value = "/codeGroupView")
+		public String codeGroupView(CodeGroupDto dto) throws Exception{
+			System.out.println("dto.getSeq():"+dto.getSeq());
+			System.out.println("dto.getName():"+dto.getName());
+			System.out.println("dto.getXifcdSeqCount():"+dto.getXifcdSeqCount());
+		
+			return "codeGroupView"; //
+			
+		}
 }
