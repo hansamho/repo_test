@@ -18,4 +18,57 @@
         ORDER BY a.Seq DESC
     </select>
 	  
+	  
+	  <select id="selectOne" resultMap="resultMapObj">
+        SELECT
+            a.Seq
+            ,a.Name
+            ,a.cgCreate
+            ,a.cgUpdate
+            ,a.cgDelete
+         FROM CodeGroup a
+        WHERE 1=1
+        AND a.seq = #{seq}
+        ORDER BY a.Seq DESC
+    </select>
+    
+    <insert id="insert">
+    	INSERT INTO codeGroup(
+            name
+            ,cgCreate
+            ,cgUpdate
+            ,cgDelete
+    	) VALUES(		
+    		#{name}
+    		,#{cgCreate}
+    		,#{cgUpdate}
+    		,#{cgDelete}
+    	)
+           
+    </insert>
+    
+    
+    <update id="update">
+    	
+    	UPDATE codeGroup 
+    	set
+    	name = #{name}
+    	WHERE seq = #{seq}
+  
+    </update>
+    
+    <update id="updateDelete">
+    	
+    	UPDATE codeGroup 
+    	set
+    	cgDelete = 0
+    	WHERE seq = #{seq}
+  
+    </update>
+    
+    <delete id="delete">
+    	DELETE FROM  codeGroup
+    	WHERE seq = #{seq}
+    </delete>
+    
 </mapper>
