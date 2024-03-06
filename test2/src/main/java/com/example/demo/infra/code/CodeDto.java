@@ -8,6 +8,7 @@ public class CodeDto {
 	private String name;
 	private Date codeCreate;
 	private Integer codeDelete;
+	private Integer codeUpdate;
 	
 	private String code_seq; //그룹코드seq
 	private String codegroup_name; //그룹코드name
@@ -35,6 +36,12 @@ public class CodeDto {
 	public void setCodeDelete(Integer codeDelete) {
 		this.codeDelete = codeDelete;
 	}
+	public Integer getCodeUpdate() {
+		return codeUpdate;
+	}
+	public void setCodeUpdate(Integer codeUpdate) {
+		this.codeUpdate = codeUpdate;
+	}
 	public String getCode_seq() {
 		return code_seq;
 	}
@@ -48,7 +55,8 @@ public class CodeDto {
 		this.codegroup_name = codegroup_name;
 	}
 	
-
+	
+	
 	
 	
 }
